@@ -1,0 +1,3 @@
+### Redis 조회 테스트
+GET http://localhost/getZsetValue?key=cafe
+Content-Type: application/json
