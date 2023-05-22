@@ -36,6 +36,11 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-redis-reactive'
 	testImplementation 'io.projectreactor:reactor-test'
 
+	// test-container
+	testImplementation "org.junit.jupiter:junit-jupiter:5.8.1"
+	testImplementation "org.testcontainers:testcontainers:1.18.0"
+	testImplementation "org.testcontainers:junit-jupiter:1.18.0"
+
 }
 
 bootJar{
