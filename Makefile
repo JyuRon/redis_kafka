@@ -12,3 +12,11 @@ sentinel-up:
 
 sentinel-down:
 	docker-compose -f docker-compose-sentinel.yml down -v
+
+
+# 배포 환경 구성
+prod-up:
+	docker-compose up -d --force-recreate --build --scale redis-sentinel=3
+
+prod-down:
+	docker-compose down -v

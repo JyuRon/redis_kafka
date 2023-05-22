@@ -1,9 +1,7 @@
-version: '3.8'
-
+version: "3.8"
 networks:
   app-tier:
     driver: bridge
-
 services:
   redis:
     image: 'bitnami/redis:latest'
@@ -41,5 +39,20 @@ services:
       - redis-slave
     ports:
       - '26379-26381:26379'
+    networks:
+      - app-tier
+  redis-kafka-app:
+    container_name: redis-kafka-app
+    build: .
+    depends_on:
+      - redis
+      - redis-slave
+      - redis-sentinel
+    image: jyuka/redis-kafka-app
+    environment:
+      - SPRING_PROFILES_ACTIVE=${SPRING_PROFILES_ACTIVE}
+    ports:
+      - "80:8080"
+    restart: always
     networks:
       - app-tier
