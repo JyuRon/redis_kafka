@@ -8,6 +8,9 @@ services:                                               # 컨테이너의 집합
     image: redis:6
     ports:                                              # 접근 포트 설정(호스트 port : 컨테이너 port)
       - "6379:6379"
+    volumes:
+      - ./redis/conf/sample.redis:/dev/sample.redis
+
   redis-slave:                        # 서비스 명(네트워크 호스트명) / 같은 네트워크에 속한 컨테이너끼리 서비스 명으로 접근 가능
     container_name: redis-slave
     image: redis:6
