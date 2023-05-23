@@ -1,3 +1,10 @@
 ### Redis 조회 테스트
-GET http://localhost/getZsetValue?key=cafe
+GET http://localhost/getZsetValue?key=PG0001
 Content-Type: application/json
+
+
+### 상품 등록 후 최저가 순위를 반환 (rank is zreo-base)
+POST http://localhost/product
+Content-Type: application/json
+
+< ./json/CreateNewProduct.json
