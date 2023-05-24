@@ -3,8 +3,20 @@ GET http://localhost/getZsetValue?key=PG0001
 Content-Type: application/json
 
 
-### 상품 등록 후 최저가 순위를 반환 (rank is zreo-base)
+### 상품이 존재하는 경우 상품에 대한 판매처 정보(id, price) 입력후 최저가 순위 반영 (rank is zreo-base)
 POST http://localhost/product
 Content-Type: application/json
 
 < ./json/CreateNewProduct.json
+
+
+### 상품이 존재하지 않는 경우 상품번호(productGroupId) 와 판매처 정보를 입력 받아 저장 이후 저장된 판매처 갯수 반환
+POST http://localhost/productGroup
+Content-Type: application/json
+
+< ./json/CreateNewProductGroup.json
+
+
+### Redis 조회 테스트
+GET http://localhost/productPrice/lowest?keyword=test
+Content-Type: application/json

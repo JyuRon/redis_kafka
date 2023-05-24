@@ -1,0 +1,29 @@
+{
+  "productGroupId" : "PG2222",
+  "productList" : [
+    {
+      "productId" : "2023-05-23-17-10",
+      "price" : 1000
+    },
+    {
+      "productId" : "2023-05-23-17-11",
+      "price" : 2000
+    },
+    {
+      "productId" : "2023-05-23-17-12",
+      "price" : 1000
+    },
+    {
+      "productId" : "2023-05-23-17-13",
+      "price" : 3000
+    },
+    {
+      "productId" : "2023-05-23-17-14",
+      "price" : 4000
+    },
+    {
+      "productId" : "2023-05-23-17-15",
+      "price" : 5000
+    }
+  ]
+}
